@@ -11,14 +11,20 @@
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
+
+
 
 :root {
     --Left--BackGround: #000000;
     --Middle--Background: #1E1E1E;
+    --Bottm--Background: #1a1616;
     --Font--Family: 'Manrope', sans-serif;
     --Font--Weight: 700;
     --Window--Width: 100%;
+    --TooSmall--font: 1.1rem;
     --VerySmall--Font: 1.2rem;
     --Small--Font: 1.4rem;
     --Medium--Font: 1.6rem;
@@ -30,21 +36,41 @@ html {
     --Right--LineHeight: 2.26rem;
     --Middle--LineHeight: 2.56rem;
     --Small--LineHeight: 1.92rem;
+    --Bottom--LineHeight: 2.4rem;
     --Transform: none;
     --Text--Decoration: none;
     --Letter--Spacing: 0;
+    --Progress--BorderRadius: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--Middle--Background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(89, 83, 83);
+    border-radius: .1rem;
 }
 
 #Main {
     position: relative;
+    font-family: var(--Font--Family);
 }
 
 .Container {
-    width: var(--Window--Width);
+    position: relative;
+    display: flex;
+    width: 154rem;
+    overflow: hidden;
     height: 200vh;
     background-color: var(--Middle--Background);
+    font-family: var(--Font--Family);
 
-    #Right {
+    #Left {
         position: fixed;
         width: 24rem;
         height: 100vh;
@@ -62,6 +88,7 @@ html {
                 width: 13.3rem;
             }
         }
+
         #PlayListIcon {
             border: .1rem solid white;
             padding: .6rem;
@@ -119,6 +146,14 @@ html {
             background-color: var(--Color--Smoky);
         }
     }
+
+    #Right {
+        position: absolute;
+        left: 24rem;
+        background-color: red;
+        width: 130rem;
+        height: 10vh;
+    }
 }
 
 #BottomFooter {
@@ -128,30 +163,174 @@ html {
     bottom: 0;
     background-color: red;
     display: flex;
+    font-family: var(--Font--Family);
+    background-color: var(--Bottm--Background);
+    border-top: .1rem solid rgb(85, 82, 82);
 
     #First {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 9rem;
-
-        height: auto;
-        background-color: blue;
         width: 9rem;
+
+        img {
+            border-radius: .1rem;
+            height: 6rem;
+            width: 6rem;
+        }
     }
 
     #Second {
         height: 9rem;
-        background-color: aqua;
         width: 37rem;
+        display: flex;
+
+        #SongInfo {
+            display: block;
+            width: 29.5rem;
+            padding: 1.4rem;
+
+            #SongName {
+                margin-top: 1rem;
+                line-height: var(--Bottom--LineHeight);
+                font-weight: var(--Font--Weight);
+                color: var(--Color--White);
+                font-size: var(--Medium--Font);
+            }
+
+            #Artist {
+                color: var(--Color--Smoky);
+                font-size: var(--TooSmall--font);
+            }
+        }
+
+        #SongInfoIcon {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 7.5rem;
+
+            i {
+                cursor: pointer;
+                color: var(--Color--Smoky);
+                font-size: var(--Medium--Font);
+            }
+        }
     }
 
     #Third {
         height: 9rem;
-        background-color: brown;
         width: 65rem;
+
+        #UpperFun {
+            height: 5.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 65rem;
+
+            .upp {
+                margin-left: 3rem;
+                color: var(--Color--Smoky);
+
+                &:nth-child(1) {
+                    font-size: 1.5rem;
+                    margin-left: -4rem;
+                    cursor: pointer;
+                }
+
+                &:nth-child(5) {
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+
+                &:nth-child(2) {
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+
+                &:nth-child(3) {
+                    width: 3.5rem;
+                    border-radius: 50%;
+                    height: 3.5rem;
+                    padding: 1.2rem;
+                    color: var(--Color--Black);
+                    background-color: var(--Color--White);
+                    font-size: 1.4rem;
+                    cursor: pointer;
+                }
+
+                &:nth-child(4) {
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #DownFun {
+            height: 3.5rem;
+            width: 65rem;
+            display: flex;
+            align-items: center;
+
+            .InitialTime {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 4rem;
+                display: flex;
+                width: 5rem;
+                color: var(--Color--Smoky);
+            }
+
+            .ProgressBar {
+                width: 55rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 4rem;
+
+                #MainProgress {
+                    background-color: var(--Color--Smoky);
+                    height: .4rem;
+                    border-radius: var(--Progress--BorderRadius);
+                    cursor: pointer;
+                    width: 52rem;
+
+                    #InnerProgressBar {
+                        height: .4rem;
+                        background-color: var(--Color--White);
+                        width: 4rem;
+                        border-radius: var(--Progress--BorderRadius);
+                    }
+                }
+            }
+
+            .FinalTime {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 5rem;
+                display: flex;
+                height: 4rem;
+                color: var(--Color--Smoky);
+            }
+        }
     }
 
     #Fourth {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 9rem;
-        background-color: chartreuse;
         width: 41rem;
+
+        .ll {
+            font-size: var(--Medium--Font);
+            color: var(--Color--Smoky);
+            margin-right: 1.5rem;
+            cursor: pointer;
+        }
     }
 }

@@ -8,14 +8,18 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 :root {
   --Left--BackGround: #000000;
   --Middle--Background: #1E1E1E;
+  --Bottm--Background: #1a1616;
   --Font--Family: "Manrope", sans-serif;
   --Font--Weight: 700;
   --Window--Width: 100%;
+  --TooSmall--font: 1.1rem;
   --VerySmall--Font: 1.2rem;
   --Small--Font: 1.4rem;
   --Medium--Font: 1.6rem;
@@ -27,38 +31,58 @@ html {
   --Right--LineHeight: 2.26rem;
   --Middle--LineHeight: 2.56rem;
   --Small--LineHeight: 1.92rem;
+  --Bottom--LineHeight: 2.4rem;
   --Transform: none;
   --Text--Decoration: none;
   --Letter--Spacing: 0;
+  --Progress--BorderRadius: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--Middle--Background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(89, 83, 83);
+  border-radius: 0.1rem;
 }
 
 #Main {
   position: relative;
+  font-family: var(--Font--Family);
 }
 
 .Container {
-  width: var(--Window--Width);
+  position: relative;
+  display: flex;
+  width: 154rem;
+  overflow: hidden;
   height: 200vh;
   background-color: var(--Middle--Background);
+  font-family: var(--Font--Family);
 }
-.Container #Right {
+.Container #Left {
   position: fixed;
   width: 24rem;
   height: 100vh;
   background-color: var(--Left--BackGround);
   color: var(--Color--White);
 }
-.Container #Right .Logo {
+.Container #Left .Logo {
   padding-top: 0.8rem;
   width: var(--Window--Width);
   height: 8rem;
 }
-.Container #Right .Logo .spotify-logo--text {
+.Container #Left .Logo .spotify-logo--text {
   height: 7.1rem;
   margin-left: 2.1rem;
   width: 13.3rem;
 }
-.Container #Right #PlayListIcon {
+.Container #Left #PlayListIcon {
   border: 0.1rem solid white;
   padding: 0.6rem;
   color: var(--Color--Black);
@@ -66,7 +90,7 @@ html {
   font-size: var(--VerySmall--Font);
   border-radius: var(--Border--Radius);
 }
-.Container #Right #LikedIcon {
+.Container #Left #LikedIcon {
   border: 0.1rem solid white;
   padding: 0.6rem;
   color: var(--Color--Black);
@@ -74,10 +98,10 @@ html {
   font-size: var(--VerySmall--Font);
   border-radius: var(--Border--Radius);
 }
-.Container #Right #Library {
+.Container #Left #Library {
   margin-bottom: 3rem;
 }
-.Container #Right .Common {
+.Container #Left .Common {
   font-family: var(--Font--Family);
   font-weight: var(--Font--Weight);
   padding-left: 2.3rem;
@@ -88,24 +112,31 @@ html {
   margin-top: 0.6rem;
   cursor: pointer;
 }
-.Container #Right .Common .ok {
+.Container #Left .Common .ok {
   font-size: var(--Large--Font);
   cursor: pointer;
 }
-.Container #Right .Common .active {
+.Container #Left .Common .active {
   color: var(--Color--White);
 }
-.Container #Right .Common .CommomText {
+.Container #Left .Common .CommomText {
   font-size: var(--Small--Font);
   margin-left: 1.5rem;
   cursor: pointer;
 }
-.Container #Right .Line {
+.Container #Left .Line {
   margin-left: 2.3rem;
   margin-top: 0.1rem;
   width: 80%;
   height: 0.1rem;
   background-color: var(--Color--Smoky);
+}
+.Container #Right {
+  position: absolute;
+  left: 24rem;
+  background-color: red;
+  width: 130rem;
+  height: 10vh;
 }
 
 #BottomFooter {
@@ -115,25 +146,150 @@ html {
   bottom: 0;
   background-color: red;
   display: flex;
+  font-family: var(--Font--Family);
+  background-color: var(--Bottm--Background);
+  border-top: 0.1rem solid rgb(85, 82, 82);
 }
 #BottomFooter #First {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 9rem;
-  height: auto;
-  background-color: blue;
   width: 9rem;
+}
+#BottomFooter #First img {
+  border-radius: 0.1rem;
+  height: 6rem;
+  width: 6rem;
 }
 #BottomFooter #Second {
   height: 9rem;
-  background-color: aqua;
   width: 37rem;
+  display: flex;
+}
+#BottomFooter #Second #SongInfo {
+  display: block;
+  width: 29.5rem;
+  padding: 1.4rem;
+}
+#BottomFooter #Second #SongInfo #SongName {
+  margin-top: 1rem;
+  line-height: var(--Bottom--LineHeight);
+  font-weight: var(--Font--Weight);
+  color: var(--Color--White);
+  font-size: var(--Medium--Font);
+}
+#BottomFooter #Second #SongInfo #Artist {
+  color: var(--Color--Smoky);
+  font-size: var(--TooSmall--font);
+}
+#BottomFooter #Second #SongInfoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 7.5rem;
+}
+#BottomFooter #Second #SongInfoIcon i {
+  cursor: pointer;
+  color: var(--Color--Smoky);
+  font-size: var(--Medium--Font);
 }
 #BottomFooter #Third {
   height: 9rem;
-  background-color: brown;
   width: 65rem;
 }
+#BottomFooter #Third #UpperFun {
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65rem;
+}
+#BottomFooter #Third #UpperFun .upp {
+  margin-left: 3rem;
+  color: var(--Color--Smoky);
+}
+#BottomFooter #Third #UpperFun .upp:nth-child(1) {
+  font-size: 1.5rem;
+  margin-left: -4rem;
+  cursor: pointer;
+}
+#BottomFooter #Third #UpperFun .upp:nth-child(5) {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#BottomFooter #Third #UpperFun .upp:nth-child(2) {
+  font-size: 2rem;
+  cursor: pointer;
+}
+#BottomFooter #Third #UpperFun .upp:nth-child(3) {
+  width: 3.5rem;
+  border-radius: 50%;
+  height: 3.5rem;
+  padding: 1.2rem;
+  color: var(--Color--Black);
+  background-color: var(--Color--White);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+#BottomFooter #Third #UpperFun .upp:nth-child(4) {
+  font-size: 2rem;
+  cursor: pointer;
+}
+#BottomFooter #Third #DownFun {
+  height: 3.5rem;
+  width: 65rem;
+  display: flex;
+  align-items: center;
+}
+#BottomFooter #Third #DownFun .InitialTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  display: flex;
+  width: 5rem;
+  color: var(--Color--Smoky);
+}
+#BottomFooter #Third #DownFun .ProgressBar {
+  width: 55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+}
+#BottomFooter #Third #DownFun .ProgressBar #MainProgress {
+  background-color: var(--Color--Smoky);
+  height: 0.4rem;
+  border-radius: var(--Progress--BorderRadius);
+  cursor: pointer;
+  width: 52rem;
+}
+#BottomFooter #Third #DownFun .ProgressBar #MainProgress #InnerProgressBar {
+  height: 0.4rem;
+  background-color: var(--Color--White);
+  width: 4rem;
+  border-radius: var(--Progress--BorderRadius);
+}
+#BottomFooter #Third #DownFun .FinalTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  display: flex;
+  height: 4rem;
+  color: var(--Color--Smoky);
+}
 #BottomFooter #Fourth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 9rem;
-  background-color: chartreuse;
   width: 41rem;
+}
+#BottomFooter #Fourth .ll {
+  font-size: var(--Medium--Font);
+  color: var(--Color--Smoky);
+  margin-right: 1.5rem;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -35,14 +35,17 @@ html {
     --Letter--Spacing: 0;
 }
 
-.Container {
+#Main {
     position: relative;
+}
+
+.Container {
     width: var(--Window--Width);
-    height: 100vh;
+    height: 200vh;
     background-color: var(--Middle--Background);
 
     #Right {
-        position: absolute;
+        position: fixed;
         width: 24rem;
         height: 100vh;
         background-color: var(--Left--BackGround);
@@ -59,7 +62,6 @@ html {
                 width: 13.3rem;
             }
         }
-
         #PlayListIcon {
             border: .1rem solid white;
             padding: .6rem;
@@ -78,6 +80,10 @@ html {
             border-radius: var(--Border--Radius);
         }
 
+        #Library {
+            margin-bottom: 3rem;
+        }
+
         .Common {
             font-family: var(--Font--Family);
             font-weight: var(--Font--Weight);
@@ -85,7 +91,7 @@ html {
             display: flex;
             color: var(--Color--Smoky);
             align-items: center;
-            height: 4.5rem;
+            height: 4rem;
             margin-top: .6rem;
             cursor: pointer;
 
@@ -93,6 +99,7 @@ html {
                 font-size: var(--Large--Font);
                 cursor: pointer;
             }
+
             .active {
                 color: var(--Color--White);
             }
@@ -105,10 +112,46 @@ html {
         }
 
         .Line {
+            margin-left: 2.3rem;
             margin-top: .1rem;
-            width: 100%;
+            width: 80%;
             height: .1rem;
             background-color: var(--Color--Smoky);
         }
+    }
+}
+
+#BottomFooter {
+    position: fixed;
+    height: 9rem;
+    width: 100%;
+    bottom: 0;
+    background-color: red;
+    display: flex;
+
+    #First {
+        height: 9rem;
+
+        height: auto;
+        background-color: blue;
+        width: 9rem;
+    }
+
+    #Second {
+        height: 9rem;
+        background-color: aqua;
+        width: 37rem;
+    }
+
+    #Third {
+        height: 9rem;
+        background-color: brown;
+        width: 65rem;
+    }
+
+    #Fourth {
+        height: 9rem;
+        background-color: chartreuse;
+        width: 41rem;
     }
 }

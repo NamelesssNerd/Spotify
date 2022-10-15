@@ -152,16 +152,202 @@ html {
         left: 24rem;
         background-color: red;
         width: 130rem;
-        height: 10vh;
+        height: 100vh;
+
+        nav {
+            background-color: #302828f4;
+            height: 6.5rem;
+            display: flex;
+            justify-content: space-between;
+
+            .Arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 12rem;
+                .oi {
+                    padding: .4rem;
+                    cursor: pointer;
+                    width: 3.3rem;
+                    height: 3.3rem;
+                    border-radius: 50%;
+                    color: var(--Color--White);
+                    background-color: var(--Color--Black);
+                    margin-left: .5rem;
+                    font-size: 2.7rem;
+                }
+            }
+
+            .Plan {
+                display: flex;
+                align-items: center;
+                margin-right: 2rem;
+                width: 31rem;
+                button {
+                    margin-left: 1rem;
+                    width: 9.5rem;
+                    height: 4rem;
+                    background-color: var(--Color--Black);
+                    color: var(--Color--White);
+                    border-radius: 3rem;
+                    cursor: pointer;
+                    border: .1rem solid rgb(148, 130, 130);
+                    font-weight: var(--Font--Weight);
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                #Info {
+                    height: 4rem;
+                    display: flex;
+                    align-items: center;
+                    background-color: var(--Color--Black);
+                    width: 18rem;
+                    margin-left: 2rem;
+                    border-radius: 2rem;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #474141;
+                    }
+
+                    .use {
+                        width: 3rem;
+                        height: 3rem;
+                        padding: .7rem;
+                        color: var(--Color--White);
+                        border-radius: 50%;
+                        font-size: var(--Small--Font);
+                        margin-left: .5rem;
+                        background-color: var(--Color--Smoky);
+
+                    }
+
+                    h2 {
+                        color: var(--Color--White);
+                        font-size: var(--Small--Font);
+                        margin-left: .5rem;
+                    }
+
+                    .do {
+                        color: var(--Color--White);
+                        font-size: var(--Small--Font);
+                        margin-left: .6rem;
+                    }
+                }
+            }
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #BottomFooter {
     position: fixed;
     height: 9rem;
     width: 100%;
     bottom: 0;
-    background-color: red;
     display: flex;
     font-family: var(--Font--Family);
     background-color: var(--Bottm--Background);

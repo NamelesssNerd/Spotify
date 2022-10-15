@@ -136,7 +136,83 @@ html {
   left: 24rem;
   background-color: red;
   width: 130rem;
-  height: 10vh;
+  height: 100vh;
+}
+.Container #Right nav {
+  background-color: rgba(48, 40, 40, 0.9568627451);
+  height: 6.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.Container #Right nav .Arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+}
+.Container #Right nav .Arrow .oi {
+  padding: 0.4rem;
+  cursor: pointer;
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  color: var(--Color--White);
+  background-color: var(--Color--Black);
+  margin-left: 0.5rem;
+  font-size: 2.7rem;
+}
+.Container #Right nav .Plan {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  width: 31rem;
+}
+.Container #Right nav .Plan button {
+  margin-left: 1rem;
+  width: 9.5rem;
+  height: 4rem;
+  background-color: var(--Color--Black);
+  color: var(--Color--White);
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 0.1rem solid rgb(148, 130, 130);
+  font-weight: var(--Font--Weight);
+}
+.Container #Right nav .Plan button:hover {
+  transform: scale(1.1);
+}
+.Container #Right nav .Plan #Info {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--Color--Black);
+  width: 18rem;
+  margin-left: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.Container #Right nav .Plan #Info:hover {
+  background-color: #474141;
+}
+.Container #Right nav .Plan #Info .use {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.7rem;
+  color: var(--Color--White);
+  border-radius: 50%;
+  font-size: var(--Small--Font);
+  margin-left: 0.5rem;
+  background-color: var(--Color--Smoky);
+}
+.Container #Right nav .Plan #Info h2 {
+  color: var(--Color--White);
+  font-size: var(--Small--Font);
+  margin-left: 0.5rem;
+}
+.Container #Right nav .Plan #Info .do {
+  color: var(--Color--White);
+  font-size: var(--Small--Font);
+  margin-left: 0.6rem;
 }
 
 #BottomFooter {
@@ -144,7 +220,6 @@ html {
   height: 9rem;
   width: 100%;
   bottom: 0;
-  background-color: red;
   display: flex;
   font-family: var(--Font--Family);
   background-color: var(--Bottm--Background);

@@ -61,8 +61,48 @@ const MusicInfo = [
     }
 ];
 
-
-
+const Fresh = [
+    {
+        IMG: '../images/Cover/1.png',
+        SONGNAME: 'Nepal Top Songs 2079',
+        ARTISTNAME: 'Sabin Rai'
+    },
+    {
+        IMG: '../images/Cover/2.png',
+        SONGNAME: 'NOT SOBER (feat. POLO G)',
+        ARTISTNAME: 'The Kid Larol'
+    },
+    {
+        IMG: '../images/Cover/3.png',
+        SONGNAME: 'G Herbo',
+        ARTISTNAME: 'Stunna Gambino'
+    },
+    {
+        IMG: '../images/Cover/4.png',
+        SONGNAME: "DON'T LEAVE ME",
+        ARTISTNAME: 'Lil Durk'
+    },
+    {
+        IMG: '../images/Cover/5.png',
+        SONGNAME: 'BAD NEWS',
+        ARTISTNAME: 'The Kid LAROL'
+    },
+    {
+        IMG: '../images/Cover/6.png',
+        SONGNAME: 'CALLING MY PHONE',
+        ARTISTNAME: 'Lil Tjay'
+    },
+    {
+        IMG: '../images/Cover/7.png',
+        SONGNAME: 'REAL SPILL',
+        ARTISTNAME: 'Lil BAby'
+    },
+    {
+        IMG: '../images/Cover/8.png',
+        SONGNAME: 'AS IT WAS',
+        ARTISTNAME: 'Harry Styles'
+    }
+];
 
 // let SongNumber = MusicInfo.length - 1;
 // let SongNumberCount = 0;
@@ -70,14 +110,15 @@ const MusicInfo = [
 // let Min = 0;
 // let ISecond = 0;
 // let IMin = 0;
-
-// const Music = document.getElementById("myAudio");
+const HamroDataDivv = document.getElementById('Fresh');
+const Music = document.getElementById("myAudio");
+// Music.play();
 // const SongName = document.getElementById('SongName');
 // const ArtistName = document.getElementById('ArtistName');
 // const Picture = document.getElementById('Picture');
 // const Back = document.getElementById('Back');
-// const PLAY = document.getElementById('Play');
-// const Next = document.getElementById('Next');
+const PLAY = document.getElementById('Play');
+const Next = document.getElementById('Next');
 // const M = document.getElementById('M');
 // const S = document.getElementById('S');
 // const LM = document.getElementById('LM');
@@ -86,6 +127,21 @@ const MusicInfo = [
 // const ProgressBarInner = document.getElementById('ProgressBarInner');
 // const ProgressBarClick = document.getElementById('ProgressBar');
 
+
+
+
+Fresh.map((currenELem) => {
+    const InnerData = `<div class="box">
+    <div class="Image">
+        <img src="${currenELem.IMG}" alt="">
+    </div>
+    <div class="bottom">
+        <h3 class="SongsName">${currenELem.SONGNAME}</h3>
+        <h3 class="Artistss">${currenELem.ARTISTNAME}</h3>
+    </div>
+</div>`;
+    HamroDataDivv.insertAdjacentHTML('beforeend', InnerData);
+})
 
 // function MUSICALL(index) {
 //     SongName.textContent = MusicInfo[index].NAME;

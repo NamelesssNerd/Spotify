@@ -35,6 +35,7 @@ html {
   --Transform: none;
   --Text--Decoration: none;
   --Letter--Spacing: 0;
+  --Box--Background: rgb(40, 36, 36);
   --Progress--BorderRadius: 1rem;
 }
 
@@ -134,9 +135,8 @@ html {
 .Container #Right {
   position: absolute;
   left: 24rem;
-  background-color: rgb(255, 0, 0);
   width: 130rem;
-  height: 100vh;
+  height: 150vh;
 }
 .Container #Right nav {
   background-color: rgba(48, 40, 40, 0.9568627451);
@@ -218,12 +218,10 @@ html {
 }
 .Container #Right #Recen {
   width: 130rem;
-  height: 43rem;
-  background-color: blue;
+  height: 45rem;
   overflow: hidden;
 }
 .Container #Right #Recen .RR {
-  background-color: red;
   height: 7rem;
   width: 30rem;
 }
@@ -238,22 +236,103 @@ html {
   border-radius: var(--Border--Radius);
   margin-top: 1rem;
   margin-left: 2rem;
-  width: 20rem;
-  height: 33rem;
-  background-color: aqua;
+  width: 19rem;
+  height: 29rem;
+  background-color: var(--Box--Background);
   overflow: hidden;
+  cursor: pointer;
+}
+.Container #Right #Recen .box:hover {
+  transition: 0.3s;
+  background-color: #2b2828;
 }
 .Container #Right #Recen .box .Image {
-  width: 20rem;
+  width: 19rem;
   height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
 }
 .Container #Right #Recen .box .Image img {
   width: 16rem;
+  border-radius: var(--Progress--BorderRadius);
+}
+.Container #Right #Recen .box .bottom {
+  padding-left: 2rem;
+  padding-top: 1rem;
+  height: 9rem;
+  width: 19rem;
+}
+.Container #Right #Recen .box .bottom .SongsName {
+  font-size: var(--Medium--Font);
+  color: var(--Color--White);
+}
+.Container #Right #Recen .box .bottom .Artistss {
+  color: var(--Color--Smoky);
+  font-size: var(--Small--Font);
+  font-weight: var(--Font--Weight);
+}
+.Container #Right #Recen h2 {
+  padding-top: 1.5rem;
+  color: var(--Color--White);
+  font-size: var(--Large--Font);
+  font-weight: var(--Font--Weight);
+  margin-left: 2rem;
+}
+.Container #Right #Fresh {
+  display: flex;
+  width: 130rem;
+  height: 65rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.Container #Right #Fresh h2 {
+  padding-top: 1.5rem;
+  color: var(--Color--White);
+  font-size: var(--Large--Font);
+  font-weight: var(--Font--Weight);
+  margin-left: 2rem;
+  font-weight: 900;
+}
+.Container #Right #Fresh .box {
   border-radius: var(--Border--Radius);
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  width: 19rem;
+  height: 29rem;
+  background-color: var(--Box--Background);
+  overflow: hidden;
+  cursor: pointer;
+}
+.Container #Right #Fresh .box:hover {
+  transition: 0.3s;
+  background-color: #2b2828;
+}
+.Container #Right #Fresh .box .Image {
+  width: 19rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Container #Right #Fresh .box .Image img {
+  width: 16rem;
+  border-radius: var(--Progress--BorderRadius);
+}
+.Container #Right #Fresh .box .bottom {
+  padding-left: 2rem;
+  padding-top: 1rem;
+  height: 9rem;
+  width: 19rem;
+}
+.Container #Right #Fresh .box .bottom .SongsName {
+  font-size: var(--Medium--Font);
+  color: var(--Color--White);
+}
+.Container #Right #Fresh .box .bottom .Artistss {
+  color: var(--Color--Smoky);
+  font-size: var(--Small--Font);
+  font-weight: var(--Font--Weight);
 }
 
 #BottomFooter {

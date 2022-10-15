@@ -40,6 +40,7 @@ html {
     --Transform: none;
     --Text--Decoration: none;
     --Letter--Spacing: 0;
+    --Box--Background: rgb(40, 36, 36);
     --Progress--BorderRadius: 1rem;
 }
 
@@ -150,10 +151,8 @@ html {
     #Right {
         position: absolute;
         left: 24rem;
-        background-color: rgb(255, 0, 0);
         width: 130rem;
-        height: 100vh;
-
+        height: 150vh;
         nav {
             background-color: #302828f4;
             height: 6.5rem;
@@ -246,12 +245,10 @@ html {
 
         #Recen {
             width: 130rem;
-            height: 43rem;
-            background-color: blue;
+            height: 45rem;
             overflow: hidden;
 
             .RR {
-                background-color: red;
                 height: 7rem;
                 width: 30rem;
 
@@ -268,22 +265,116 @@ html {
                 border-radius: var(--Border--Radius);
                 margin-top: 1rem;
                 margin-left: 2rem;
-                width: 20rem;
-                height: 33rem;
-                background-color: aqua;
+                width: 19rem;
+                height: 29rem;
+                background-color: var(--Box--Background);
                 overflow: hidden;
+                cursor: pointer;
+
+                &:hover {
+                    transition: .3s;
+                    background-color: #2b2828;
+                }
 
                 .Image {
-                    width: 20rem;
+                    width: 19rem;
                     height: 20rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: red;
 
                     img {
                         width: 16rem;
-                        border-radius: var(--Border--Radius);
+                        border-radius: var(--Progress--BorderRadius);
+                    }
+                }
+
+                .bottom {
+                    padding-left: 2rem;
+                    padding-top: 1rem;
+                    height: 9rem;
+                    width: 19rem;
+
+                    .SongsName {
+                        font-size: var(--Medium--Font);
+                        color: var(--Color--White);
+                    }
+
+                    .Artistss {
+                        color: var(--Color--Smoky);
+                        font-size: var(--Small--Font);
+                        font-weight: var(--Font--Weight);
+                    }
+                }
+            }
+
+            h2 {
+                padding-top: 1.5rem;
+                color: var(--Color--White);
+                font-size: var(--Large--Font);
+                font-weight: var(--Font--Weight);
+                margin-left: 2rem;
+            }
+        }
+        #Fresh {
+            display: flex;
+            width: 130rem;
+            height: 65rem;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+            h2 {
+                padding-top: 1.5rem;
+                color: var(--Color--White);
+                font-size: var(--Large--Font);
+                font-weight: var(--Font--Weight);
+                margin-left: 2rem;
+                font-weight: 900;
+            }
+
+            .box {
+                border-radius: var(--Border--Radius);
+                margin-top: 1.5rem;
+                margin-left: 2rem;
+                width: 19rem;
+                height: 29rem;
+                background-color: var(--Box--Background);
+                overflow: hidden;
+                cursor: pointer;
+
+                &:hover {
+                    transition: .3s;
+                    background-color: #2b2828;
+                }
+
+                .Image {
+                    width: 19rem;
+                    height: 20rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 16rem;
+                        border-radius: var(--Progress--BorderRadius);
+                    }
+                }
+
+                .bottom {
+                    padding-left: 2rem;
+                    padding-top: 1rem;
+                    height: 9rem;
+                    width: 19rem;
+
+                    .SongsName {
+                        font-size: var(--Medium--Font);
+                        color: var(--Color--White);
+                    }
+
+                    .Artistss {
+                        color: var(--Color--Smoky);
+                        font-size: var(--Small--Font);
+                        font-weight: var(--Font--Weight);
                     }
                 }
             }

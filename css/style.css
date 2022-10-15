@@ -134,7 +134,7 @@ html {
 .Container #Right {
   position: absolute;
   left: 24rem;
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   width: 130rem;
   height: 100vh;
 }
@@ -158,8 +158,10 @@ html {
   border-radius: 50%;
   color: var(--Color--White);
   background-color: var(--Color--Black);
-  margin-left: 0.5rem;
-  font-size: 2.7rem;
+  margin-left: 1.5rem;
+  font-size: 1.8rem;
+  padding-left: 0.8rem;
+  padding-top: 0.7rem;
 }
 .Container #Right nav .Plan {
   display: flex;
@@ -213,6 +215,45 @@ html {
   color: var(--Color--White);
   font-size: var(--Small--Font);
   margin-left: 0.6rem;
+}
+.Container #Right #Recen {
+  width: 130rem;
+  height: 43rem;
+  background-color: blue;
+  overflow: hidden;
+}
+.Container #Right #Recen .RR {
+  background-color: red;
+  height: 7rem;
+  width: 30rem;
+}
+.Container #Right #Recen .RR h2 {
+  padding-top: 1.5rem;
+  color: var(--Color--White);
+  font-size: var(--Large--Font);
+  font-weight: var(--Font--Weight);
+  margin-left: 2rem;
+}
+.Container #Right #Recen .box {
+  border-radius: var(--Border--Radius);
+  margin-top: 1rem;
+  margin-left: 2rem;
+  width: 20rem;
+  height: 33rem;
+  background-color: aqua;
+  overflow: hidden;
+}
+.Container #Right #Recen .box .Image {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+}
+.Container #Right #Recen .box .Image img {
+  width: 16rem;
+  border-radius: var(--Border--Radius);
 }
 
 #BottomFooter {

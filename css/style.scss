@@ -150,7 +150,7 @@ html {
     #Right {
         position: absolute;
         left: 24rem;
-        background-color: red;
+        background-color: rgb(255, 0, 0);
         width: 130rem;
         height: 100vh;
 
@@ -165,6 +165,7 @@ html {
                 align-items: center;
                 justify-content: center;
                 width: 12rem;
+
                 .oi {
                     padding: .4rem;
                     cursor: pointer;
@@ -173,8 +174,10 @@ html {
                     border-radius: 50%;
                     color: var(--Color--White);
                     background-color: var(--Color--Black);
-                    margin-left: .5rem;
-                    font-size: 2.7rem;
+                    margin-left: 1.5rem;
+                    font-size: 1.8rem;
+                    padding-left: .8rem;
+                    padding-top: .7rem;
                 }
             }
 
@@ -183,6 +186,7 @@ html {
                 align-items: center;
                 margin-right: 2rem;
                 width: 31rem;
+
                 button {
                     margin-left: 1rem;
                     width: 9.5rem;
@@ -208,7 +212,8 @@ html {
                     margin-left: 2rem;
                     border-radius: 2rem;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         background-color: #474141;
                     }
 
@@ -234,6 +239,51 @@ html {
                         color: var(--Color--White);
                         font-size: var(--Small--Font);
                         margin-left: .6rem;
+                    }
+                }
+            }
+        }
+
+        #Recen {
+            width: 130rem;
+            height: 43rem;
+            background-color: blue;
+            overflow: hidden;
+
+            .RR {
+                background-color: red;
+                height: 7rem;
+                width: 30rem;
+
+                h2 {
+                    padding-top: 1.5rem;
+                    color: var(--Color--White);
+                    font-size: var(--Large--Font);
+                    font-weight: var(--Font--Weight);
+                    margin-left: 2rem;
+                }
+            }
+
+            .box {
+                border-radius: var(--Border--Radius);
+                margin-top: 1rem;
+                margin-left: 2rem;
+                width: 20rem;
+                height: 33rem;
+                background-color: aqua;
+                overflow: hidden;
+
+                .Image {
+                    width: 20rem;
+                    height: 20rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: red;
+
+                    img {
+                        width: 16rem;
+                        border-radius: var(--Border--Radius);
                     }
                 }
             }

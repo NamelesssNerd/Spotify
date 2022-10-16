@@ -463,7 +463,7 @@ html {
 #BottomFooter #Third #DownFun .ProgressBar #MainProgress #InnerProgressBar {
   height: 0.4rem;
   background-color: var(--Color--White);
-  width: 4rem;
+  width: 0rem;
   border-radius: var(--Progress--BorderRadius);
 }
 #BottomFooter #Third #DownFun .FinalTime {

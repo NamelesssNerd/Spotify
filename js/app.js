@@ -105,27 +105,26 @@ const Fresh = [
 ];
 
 // let SongNumber = MusicInfo.length - 1;
-// let SongNumberCount = 0;
-// let Second = 0;
-// let Min = 0;
-// let ISecond = 0;
-// let IMin = 0;
+let SongNumberCount = 0;
+let Second = 0;
+let Min = 0;
+let ISecond = 0;
+let IMin = 0;
 const HamroDataDivv = document.getElementById('Fresh');
 const Music = document.getElementById("myAudio");
-// Music.play();
-// const SongName = document.getElementById('SongName');
-// const ArtistName = document.getElementById('ArtistName');
-// const Picture = document.getElementById('Picture');
-// const Back = document.getElementById('Back');
+const SongName = document.getElementById('SongName');
+const ArtistName = document.getElementById('Artist');
+const Picture = document.getElementById('SongImage');
+const Back = document.getElementById('Back');
 const PLAY = document.getElementById('Play');
 const Next = document.getElementById('Next');
-// const M = document.getElementById('M');
-// const S = document.getElementById('S');
-// const LM = document.getElementById('LM');
-// const LS = document.getElementById('LS');
-// const Final = document.getElementById('Final');
-// const ProgressBarInner = document.getElementById('ProgressBarInner');
-// const ProgressBarClick = document.getElementById('ProgressBar');
+const M = document.getElementById('MINInit');
+const S = document.getElementById('SECInit');
+const LM = document.getElementById('MINFin');
+const LS = document.getElementById('SECFin');
+const Final = document.getElementById('Final');
+const ProgressBarInner = document.getElementById('InnerProgressBar');
+const ProgressBarClick = document.getElementById('MainProgress');
 
 
 
@@ -143,94 +142,94 @@ Fresh.map((currenELem) => {
     HamroDataDivv.insertAdjacentHTML('beforeend', InnerData);
 })
 
-// function MUSICALL(index) {
-//     SongName.textContent = MusicInfo[index].NAME;
-//     ArtistName.textContent = MusicInfo[index].ARTIST;
-//     Picture.src = MusicInfo[index].IMG;
-//     Music.src = MusicInfo[index].LINK;
-// }
-// MUSICALL(SongNumberCount);
-// let IsPlaying = true;
+function MUSICALL(index) {
+    SongName.textContent = MusicInfo[index].NAME;
+    ArtistName.textContent = MusicInfo[index].ARTIST;
+    Picture.src = MusicInfo[index].IMG;
+    Music.src = MusicInfo[index].LINK;
+}
+MUSICALL(SongNumberCount);
+let IsPlaying = true;
 
-// Music.addEventListener('timeupdate', (event) => {
-//     const { currentTime, duration } = event.srcElement;
-//     ProgressBar(currentTime, duration);
-// })
-// PLAY.addEventListener('click', () => {
-//     IsPlaying ? Playing() : Pausing();
-// });
-// Next.addEventListener('click', () => {
-//     NextSong();
-// });
-// Back.addEventListener('click', () => {
-//     PreviousSong();
-// });
-// function Playing() {
-//     Music.play();
-//     PLAY.classList.replace('fa-play', 'fa-pause');
-//     IsPlaying = false;
-//     Picture.classList.add('Pictures');
-// }
-// function Pausing() {
-//     Music.pause();
-//     PLAY.classList.replace('fa-pause', 'fa-play');
-//     IsPlaying = true;
-//     Picture.classList.remove('Pictures');
-// }
-// function PreviousSong() {
-//     SongNumberCount--;
-//     SongNumberCount == -1 ? SongNumberCount = SongNumber : SongNumberCount;
-//     MUSICALL(SongNumberCount);
-//     Music.play()
-// }
-// function NextSong() {
-//     SongNumberCount++;
-//     SongNumberCount == 10 ? SongNumberCount = 0 : SongNumberCount;
-//     MUSICALL(SongNumberCount);
-//     Music.play()
-// }
-// function ProgressBar(curren, total) {
-//     let TotalWidth = (curren / total) * 100;
-//     ProgressBarInner.style.width = TotalWidth + '%';
-//     Min = Math.floor(total / 60);
-//     Second = Math.floor(total % 60);
-//     FinalTime(Min, Second);
-//     InitialTime(Math.floor(curren));
-// }
-// function FinalTime(minute, seconds) {
-//     if (minute) {
-//         LM.textContent = minute;
-//         LS.textContent = seconds;
-//     } else {
-//         LM.textContent = 3;
-//         LS.textContent = 13;
-//     }
-// }
-// function InitialTime(final) {
-//     IMin = Math.floor(final / 60);
-//     ISecond = (final % 60);
+Music.addEventListener('timeupdate', (event) => {
+    const { currentTime, duration } = event.srcElement;
+    ProgressBar(currentTime, duration);
+})
+PLAY.addEventListener('click', () => {
+    IsPlaying ? Playing() : Pausing();
+});
+Next.addEventListener('click', () => {
+    NextSong();
+});
+Back.addEventListener('click', () => {
+    PreviousSong();
+});
+function Playing() {
+    Music.play();
+    PLAY.classList.replace('fa-play', 'fa-pause');
+    IsPlaying = false;
+    Picture.classList.add('Pictures');
+}
+function Pausing() {
+    Music.pause();
+    PLAY.classList.replace('fa-pause', 'fa-play');
+    IsPlaying = true;
+    Picture.classList.remove('Pictures');
+}
+function PreviousSong() {
+    SongNumberCount--;
+    SongNumberCount == -1 ? SongNumberCount = SongNumber : SongNumberCount;
+    MUSICALL(SongNumberCount);
+    Music.play()
+}
+function NextSong() {
+    SongNumberCount++;
+    SongNumberCount == 10 ? SongNumberCount = 0 : SongNumberCount;
+    MUSICALL(SongNumberCount);
+    Music.play()
+}
+function ProgressBar(curren, total) {
+    let TotalWidth = (curren / total) * 100;
+    ProgressBarInner.style.width = TotalWidth + '%';
+    Min = Math.floor(total / 60);
+    Second = Math.floor(total % 60);
+    FinalTime(Min, Second);
+    InitialTime(Math.floor(curren));
+}
+function FinalTime(minute, seconds) {
+    if (minute) {
+        LM.textContent = minute;
+        LS.textContent = seconds;
+    } else {
+        LM.textContent = 3;
+        LS.textContent = 13;
+    }
+}
+function InitialTime(final) {
+    IMin = Math.floor(final / 60);
+    ISecond = (final % 60);
 
-//     if (IMin) {
-//         M.textContent = IMin;
-//         S.textContent = ISecond;
-//     } else {
-//         if (ISecond < 10) {
-//             M.textContent = IMin;
-//             S.textContent = '0' + ISecond;
-//         } else {
-//             M.textContent = IMin;
-//             S.textContent = ISecond;
-//         }
+    if (IMin) {
+        M.textContent = IMin;
+        S.textContent = ISecond;
+    } else {
+        if (ISecond < 10) {
+            M.textContent = IMin;
+            S.textContent = '0' + ISecond;
+        } else {
+            M.textContent = IMin;
+            S.textContent = ISecond;
+        }
 
-//     }
-// }
-// Music.addEventListener('ended', () => {
-//     Next.click();
-// })
-// ProgressBarClick.addEventListener('click', (event) => {
-//     const { duration } = Music;
-//     const { clientWidth } = event.srcElement;
-//     const { offsetX } = event;
-//     let OurTime = (offsetX / clientWidth) * duration;
-//     Music.currentTime = OurTime;
-// })
+    }
+}
+Music.addEventListener('ended', () => {
+    Next.click();
+})
+ProgressBarClick.addEventListener('click', (event) => {
+    const { duration } = Music;
+    const { clientWidth } = event.srcElement;
+    const { offsetX } = event;
+    let OurTime = (offsetX / clientWidth) * duration;
+    Music.currentTime = OurTime;
+})

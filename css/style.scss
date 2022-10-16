@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Manrope&family=Roboto&display=swap');
 
 
 
@@ -28,11 +28,13 @@ html {
     --VerySmall--Font: 1.2rem;
     --Small--Font: 1.4rem;
     --Medium--Font: 1.6rem;
+    --AlbumFont--Family: 'IBM Plex Sans', sans-serif;
     --Large--Font: 2.4rem;
     --Border--Radius: .4rem;
     --Color--White: rgb(255, 255, 255);
     --Color--Black: rgb(0, 0, 0);
     --Color--Smoky: rgb(179, 179, 179);
+    --ProgressHover--Color: rgb(0, 128, 0);
     --Right--LineHeight: 2.26rem;
     --Middle--LineHeight: 2.56rem;
     --Small--LineHeight: 1.92rem;
@@ -60,6 +62,94 @@ html {
 #Main {
     position: relative;
     font-family: var(--Font--Family);
+    background-color: red;
+    height: auto;
+
+    #SongListDiv {
+        top: 6rem;
+        position: absolute;
+        background-color: blue;
+        height: 140vh;
+        left: 24rem;
+        width: 130rem;
+        z-index: 1;
+
+        #SongListDivUpper {
+            height: 38rem;
+            background-color: red;
+
+            .MainUpper {
+                display: flex;
+                height: 26rem;
+                align-items: center;
+                background: linear-gradient(161deg, rgba(140, 138, 138, 1) 2%, rgba(38, 36, 36, 1) 83%, rgba(30, 29, 29, 1) 100%, rgba(30, 29, 29, 1) 100%);
+
+                img {
+                    margin-left: 3rem;
+                    width: 20rem;
+                    border-radius: var(--Border--Radius);
+                    height: 20rem;
+                    -webkit-box-shadow: -1px 3px 14px -1px rgba(0, 0, 0, 0.78);
+                    -moz-box-shadow: -1px 3px 14px -1px rgba(0, 0, 0, 0.78);
+                    box-shadow: -1px 3px 14px -1px rgba(0, 0, 0, 0.78);
+                }
+
+                .IMMName {
+                    width: 104rem;
+                    margin-left: 2rem;
+                    height: 22rem;
+
+                    h2 {
+                        font-size: 7rem;
+                        font-family: var(--AlbumFont--Family);
+                        font-weight: 900;
+                        color: var(--Color--White);
+                        letter-spacing: -.4rem;
+
+                    }
+
+                    h4 {
+                        font-size: var(--Small--Font);
+                        color: var(--Color--White);
+                        font-weight: 800;
+
+                        span {
+                            color: var(--Color--Smoky);
+                        }
+                    }
+
+                    h3 {
+                        font-size: var(--Small--Font);
+                        color: var(--Color--White);
+                        margin-top: 7rem;
+
+                    }
+                }
+            }
+
+            .IconUpper {
+                display: flex;
+                height: 12rem;
+                align-items: center;
+                background: linear-gradient(161deg, rgba(30, 29, 29, 1) 0%, rgba(31, 30, 30, 1) 0%, rgba(139, 130, 130, 1) 0%, rgba(38, 36, 36, 1) 100%);
+
+                .icc {
+                    margin-left: 1.5rem;
+                    font-size: 4.5rem;
+                    cursor: pointer;
+
+                    &:nth-child(1) {
+                        padding: 1.4rem;
+                        font-size: 2rem;
+                        width: 4.5rem;
+                        height: 4.5rem;
+                        background-color: rgb(33, 230, 33);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .Container {
@@ -153,11 +243,13 @@ html {
         left: 24rem;
         width: 130rem;
         height: 150vh;
+
         nav {
             background-color: #302828f4;
             height: 6.5rem;
             display: flex;
             justify-content: space-between;
+            z-index: 2;
 
             .Arrow {
                 display: flex;
@@ -261,7 +353,7 @@ html {
                 }
             }
 
-            .box {
+            #box {
                 border-radius: var(--Border--Radius);
                 margin-top: 1rem;
                 margin-left: 2rem;
@@ -316,6 +408,7 @@ html {
                 margin-left: 2rem;
             }
         }
+
         #Fresh {
             display: flex;
             width: 130rem;
@@ -493,6 +586,7 @@ html {
     font-family: var(--Font--Family);
     background-color: var(--Bottm--Background);
     border-top: .1rem solid rgb(85, 82, 82);
+    z-index: 99;
 
     #First {
         display: flex;
@@ -560,6 +654,10 @@ html {
             .upp {
                 margin-left: 3rem;
                 color: var(--Color--Smoky);
+
+                &:hover {
+                    color: var(--Color--White);
+                }
 
                 &:nth-child(1) {
                     font-size: 1.5rem;
@@ -630,6 +728,10 @@ html {
                         background-color: var(--Color--White);
                         width: 0rem;
                         border-radius: var(--Progress--BorderRadius);
+
+                        &:hover {
+                            background-color: var(--ProgressHover--Color);
+                        }
                     }
                 }
             }

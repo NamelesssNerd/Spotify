@@ -104,7 +104,7 @@ const Fresh = [
     }
 ];
 
-// let SongNumber = MusicInfo.length - 1;
+let SongNumber = MusicInfo.length - 1;
 let SongNumberCount = 0;
 let Second = 0;
 let Min = 0;
@@ -125,7 +125,10 @@ const LS = document.getElementById('SECFin');
 const Final = document.getElementById('Final');
 const ProgressBarInner = document.getElementById('InnerProgressBar');
 const ProgressBarClick = document.getElementById('MainProgress');
-
+const box = document.getElementById('box');
+box.addEventListener('click',()=>{
+    alert()
+})
 
 
 

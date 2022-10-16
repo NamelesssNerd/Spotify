@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Manrope&family=Roboto&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -23,11 +23,13 @@ html {
   --VerySmall--Font: 1.2rem;
   --Small--Font: 1.4rem;
   --Medium--Font: 1.6rem;
+  --AlbumFont--Family: "IBM Plex Sans", sans-serif;
   --Large--Font: 2.4rem;
   --Border--Radius: .4rem;
   --Color--White: rgb(255, 255, 255);
   --Color--Black: rgb(0, 0, 0);
   --Color--Smoky: rgb(179, 179, 179);
+  --ProgressHover--Color: rgb(0, 128, 0);
   --Right--LineHeight: 2.26rem;
   --Middle--LineHeight: 2.56rem;
   --Small--LineHeight: 1.92rem;
@@ -55,6 +57,78 @@ html {
 #Main {
   position: relative;
   font-family: var(--Font--Family);
+  background-color: red;
+  height: auto;
+}
+#Main #SongListDiv {
+  top: 6rem;
+  position: absolute;
+  background-color: blue;
+  height: 140vh;
+  left: 24rem;
+  width: 130rem;
+  z-index: 1;
+}
+#Main #SongListDiv #SongListDivUpper {
+  height: 38rem;
+  background-color: red;
+}
+#Main #SongListDiv #SongListDivUpper .MainUpper {
+  display: flex;
+  height: 26rem;
+  align-items: center;
+  background: linear-gradient(161deg, rgb(140, 138, 138) 2%, rgb(38, 36, 36) 83%, rgb(30, 29, 29) 100%, rgb(30, 29, 29) 100%);
+}
+#Main #SongListDiv #SongListDivUpper .MainUpper img {
+  margin-left: 3rem;
+  width: 20rem;
+  border-radius: var(--Border--Radius);
+  height: 20rem;
+  box-shadow: -1px 3px 14px -1px rgba(0, 0, 0, 0.78);
+}
+#Main #SongListDiv #SongListDivUpper .MainUpper .IMMName {
+  width: 104rem;
+  margin-left: 2rem;
+  height: 22rem;
+}
+#Main #SongListDiv #SongListDivUpper .MainUpper .IMMName h2 {
+  font-size: 7rem;
+  font-family: var(--AlbumFont--Family);
+  font-weight: 900;
+  color: var(--Color--White);
+  letter-spacing: -0.4rem;
+}
+#Main #SongListDiv #SongListDivUpper .MainUpper .IMMName h4 {
+  font-size: var(--Small--Font);
+  color: var(--Color--White);
+  font-weight: 800;
+}
+#Main #SongListDiv #SongListDivUpper .MainUpper .IMMName h4 span {
+  color: var(--Color--Smoky);
+}
+#Main #SongListDiv #SongListDivUpper .MainUpper .IMMName h3 {
+  font-size: var(--Small--Font);
+  color: var(--Color--White);
+  margin-top: 7rem;
+}
+#Main #SongListDiv #SongListDivUpper .IconUpper {
+  display: flex;
+  height: 12rem;
+  align-items: center;
+  background: linear-gradient(161deg, rgb(30, 29, 29) 0%, rgb(31, 30, 30) 0%, rgb(139, 130, 130) 0%, rgb(38, 36, 36) 100%);
+}
+#Main #SongListDiv #SongListDivUpper .IconUpper .icc {
+  margin-left: 1.5rem;
+  font-size: 4.5rem;
+  cursor: pointer;
+}
+#Main #SongListDiv #SongListDivUpper .IconUpper .icc:nth-child(1) {
+  padding: 1.4rem;
+  font-size: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: rgb(33, 230, 33);
+  border-radius: 50%;
 }
 
 .Container {
@@ -143,6 +217,7 @@ html {
   height: 6.5rem;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 .Container #Right nav .Arrow {
   display: flex;
@@ -232,7 +307,7 @@ html {
   font-weight: var(--Font--Weight);
   margin-left: 2rem;
 }
-.Container #Right #Recen .box {
+.Container #Right #Recen #box {
   border-radius: var(--Border--Radius);
   margin-top: 1rem;
   margin-left: 2rem;
@@ -242,32 +317,32 @@ html {
   overflow: hidden;
   cursor: pointer;
 }
-.Container #Right #Recen .box:hover {
+.Container #Right #Recen #box:hover {
   transition: 0.3s;
   background-color: #2b2828;
 }
-.Container #Right #Recen .box .Image {
+.Container #Right #Recen #box .Image {
   width: 19rem;
   height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.Container #Right #Recen .box .Image img {
+.Container #Right #Recen #box .Image img {
   width: 16rem;
   border-radius: var(--Progress--BorderRadius);
 }
-.Container #Right #Recen .box .bottom {
+.Container #Right #Recen #box .bottom {
   padding-left: 2rem;
   padding-top: 1rem;
   height: 9rem;
   width: 19rem;
 }
-.Container #Right #Recen .box .bottom .SongsName {
+.Container #Right #Recen #box .bottom .SongsName {
   font-size: var(--Medium--Font);
   color: var(--Color--White);
 }
-.Container #Right #Recen .box .bottom .Artistss {
+.Container #Right #Recen #box .bottom .Artistss {
   color: var(--Color--Smoky);
   font-size: var(--Small--Font);
   font-weight: var(--Font--Weight);
@@ -344,6 +419,7 @@ html {
   font-family: var(--Font--Family);
   background-color: var(--Bottm--Background);
   border-top: 0.1rem solid rgb(85, 82, 82);
+  z-index: 99;
 }
 #BottomFooter #First {
   display: flex;
@@ -403,6 +479,9 @@ html {
 #BottomFooter #Third #UpperFun .upp {
   margin-left: 3rem;
   color: var(--Color--Smoky);
+}
+#BottomFooter #Third #UpperFun .upp:hover {
+  color: var(--Color--White);
 }
 #BottomFooter #Third #UpperFun .upp:nth-child(1) {
   font-size: 1.5rem;
@@ -465,6 +544,9 @@ html {
   background-color: var(--Color--White);
   width: 0rem;
   border-radius: var(--Progress--BorderRadius);
+}
+#BottomFooter #Third #DownFun .ProgressBar #MainProgress #InnerProgressBar:hover {
+  background-color: var(--ProgressHover--Color);
 }
 #BottomFooter #Third #DownFun .FinalTime {
   display: flex;

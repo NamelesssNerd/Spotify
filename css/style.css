@@ -60,6 +60,12 @@ html {
   background-color: red;
   height: auto;
 }
+#Main a {
+  font-style: none;
+  margin-left: 1.8rem;
+  font-size: 4.5rem;
+  cursor: pointer;
+}
 #Main #SongListDiv {
   display: none;
   top: 6rem;

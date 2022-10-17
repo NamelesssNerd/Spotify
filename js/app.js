@@ -192,6 +192,7 @@ LibrabyText.addEventListener('click', () => {
     PlayListText.classList.remove(active);
     LikedText.classList.remove(active);
 })
+
 PlayListText.addEventListener('click', () => {
     HomeText.classList.remove(active);
     SearchText.classList.remove(active);
@@ -321,3 +322,5 @@ ProgressBarClick.addEventListener('click', (event) => {
     let OurTime = (offsetX / clientWidth) * duration;
     Music.currentTime = OurTime;
 })
+
+// * <button type="submit" onclick="window.open('file.doc')">Download!</button> */

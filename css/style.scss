@@ -65,6 +65,13 @@ html {
     background-color: red;
     height: auto;
 
+    a {
+        font-style: none;
+        margin-left: 1.8rem;
+        font-size: 4.5rem;
+        cursor: pointer;
+    }
+
     #SongListDiv {
         display: none;
         top: 6rem;
@@ -76,6 +83,7 @@ html {
 
         #SongListDivUpper {
             height: 38rem;
+
             .MainUpper {
                 display: flex;
                 height: 26rem;

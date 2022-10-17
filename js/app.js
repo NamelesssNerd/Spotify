@@ -3,61 +3,81 @@ const MusicInfo = [
         NAME: 'Badhaiyaan',
         ARTIST: 'Dhvani Bhanushali',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113604/150539-badhaiyaan-dhvani-bhanushali-mp3-song-300.jpg',
-        LINK: '../Audio/Badhaiyaan.mp3'
+        LINK: '../Audio/Badhaiyaan.mp3',
+        ALBUm: 'Middle Part',
+        DATE: '2 days ago'
     },
     {
         NAME: 'Sajna Hai Mujhe',
         ARTIST: 'Shruti Raneora',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113604/150524-sajna-hai-mujhe-shruti-rane-mp3-song-300.jpg',
-        LINK: '../Audio/Sajna Hai Mujhe - Shruti Rane.mp3'
+        LINK: '../Audio/Sajna Hai Mujhe - Shruti Rane.mp3',
+        ALBUm: 'Crestline',
+        DATE: '6 days ago'
     },
     {
         NAME: 'Kacchi Doriyaan',
         ARTIST: 'Arijit Singh',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113687/150508-kacchi-doriyaan-arijit-singh-mp3-song-300.jpg',
-        LINK: '../Audio/Kacchi Doriyaan - Arijit Singh.mp3'
+        LINK: '../Audio/Kacchi Doriyaan - Arijit Singh.mp3',
+        ALBUm: 'Under And Cant Roll',
+        DATE: '7 days ago'
     },
     {
         NAME: 'Jhaanjar',
         ARTIST: 'B Praak',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113692/150463-jhaanjar-b-praak-mp3-song-300.jpg',
-        LINK: '../Audio/Jhaanjar - B Praak.mp3'
+        LINK: '../Audio/Jhaanjar - B Praak.mp3',
+        ALBUm: 'Oh! the View',
+        DATE: '3 days ago'
     },
     {
         NAME: 'Pehli Baarish Mein',
         ARTIST: 'Sumit Bhalla',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113604/150336-pehli-baarish-mein-sumit-bhalla-mp3-song-300.jpg',
-        LINK: '../Audio/Pehli Baarish Mein - Sumit Bhalla.mp3'
+        LINK: '../Audio/Pehli Baarish Mein - Sumit Bhalla.mp3',
+        ALBUm: 'High Up',
+        DATE: '5 days ago'
     },
     {
         NAME: 'Manchali',
         ARTIST: 'Zahrah S Khan',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113643/150273-manchali-liger-mp3-song-300.jpg',
-        LINK: '../Audio/Manchali - Liger.mp3'
+        LINK: '../Audio/Manchali - Liger.mp3',
+        ALBUm: 'Winter Sun',
+        DATE: '6 days ago'
     },
     {
         NAME: 'Lahanga Se Lungi',
         ARTIST: 'Samar Singh',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113490/150262-lahanga-se-lungi-samar-singh-mp3-song-300.jpg',
-        LINK: '../Audio/Lahanga Se Lungi - Samar Singh.mp3'
+        LINK: '../Audio/Lahanga Se Lungi - Samar Singh.mp3',
+        ALBUm: 'Line Up',
+        DATE: '9 days ago'
     },
     {
         NAME: 'Suna Raja Pike Ganja ',
         ARTIST: 'Khesari Lal Yadav',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113490/149984-suna-raja-pike-ganja-khesari-lal-yadav-mp3-song-300.jpg',
-        LINK: '../Audio/Suna Raja Pike Ganja - Khesari Lal Yadav.mp3'
+        LINK: '../Audio/Suna Raja Pike Ganja - Khesari Lal Yadav.mp3',
+        ALBUm: 'Zero Gravity',
+        DATE: '4 days ago'
     },
     {
         NAME: 'Aail Sawan',
         ARTIST: 'Pawan Singh',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113490/149958-aail-sawan-pawan-singh-mp3-song-300.jpg',
-        LINK: '../Audio/Aail Sawan.mp3'
+        LINK: '../Audio/Aail Sawan.mp3',
+        ALBUm: 'Slip Away',
+        DATE: '21 days ago'
     },
     {
         NAME: 'Barf',
         ARTIST: 'Khesari Lal Yadav',
         IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113490/149888-barf-khesari-lal-yadav-mp3-song-300.jpg',
-        LINK: '../Audio/Barf - Khesari Lal Yadav.mp3'
+        LINK: '../Audio/Barf - Khesari Lal Yadav.mp3',
+        ALBUm: 'Nuraghe',
+        DATE: '11 days ago'
     }
 ];
 
@@ -103,7 +123,23 @@ const Fresh = [
         ARTISTNAME: 'Harry Styles'
     }
 ];
-
+MusicInfo.map((INFF, i) => {
+    const InnD = `<div id="NameList" onclick="MUSICALL(${i})">
+    <div class="hh">
+    <h3 id="id">${i + 1}</h3>
+    <div class="songgi">
+    <img src="${INFF.IMG}" alt="" id="ALL">
+    <div class="dddddaaatttaaa">
+    <h3 id="ssoonngg">${INFF.NAME}</h3>
+    <h4 id="aarrttiisst">${INFF.ARTIST}</h4>
+    </div>
+    </div>
+    </div>
+    <h3 id="alb">${INFF.ALBUm}</h3>
+    <h3 id="daa">${INFF.DATE}</h3>
+    </div>`;
+    NameListSongs.insertAdjacentHTML('beforeend', InnD);
+});
 let SongNumber = MusicInfo.length - 1;
 let SongNumberCount = 0;
 let Second = 0;
@@ -126,8 +162,56 @@ const Final = document.getElementById('Final');
 const ProgressBarInner = document.getElementById('InnerProgressBar');
 const ProgressBarClick = document.getElementById('MainProgress');
 const box = document.getElementById('box');
-box.addEventListener('click',()=>{
-    alert()
+const SongListDiv = document.getElementById('SongListDiv');
+const HomeText = document.getElementById('HomeText');
+const SearchText = document.getElementById('SearchText');
+const LibrabyText = document.getElementById('LibrabyText');
+const PlayListText = document.getElementById('PlayListText');
+const LikedText = document.getElementById('LikedText');
+const BB = document.getElementById('BB');
+
+const active = 'active';
+HomeText.addEventListener('click', () => {
+    HomeText.classList.add(active);
+    SearchText.classList.remove(active);
+    LibrabyText.classList.remove(active);
+    PlayListText.classList.remove(active);
+    LikedText.classList.remove(active);
+})
+SearchText.addEventListener('click', () => {
+    HomeText.classList.remove(active);
+    SearchText.classList.add(active);
+    LibrabyText.classList.remove(active);
+    PlayListText.classList.remove(active);
+    LikedText.classList.remove(active);
+})
+LibrabyText.addEventListener('click', () => {
+    HomeText.classList.remove(active);
+    SearchText.classList.remove(active);
+    LibrabyText.classList.add(active);
+    PlayListText.classList.remove(active);
+    LikedText.classList.remove(active);
+})
+PlayListText.addEventListener('click', () => {
+    HomeText.classList.remove(active);
+    SearchText.classList.remove(active);
+    LibrabyText.classList.remove(active);
+    PlayListText.classList.add(active);
+    LikedText.classList.remove(active);
+})
+LikedText.addEventListener('click', () => {
+    HomeText.classList.remove(active);
+    SearchText.classList.remove(active);
+    LibrabyText.classList.remove(active);
+    PlayListText.classList.remove(active);
+    LikedText.classList.add(active);
+})
+
+box.addEventListener('click', () => {
+    SongListDiv.style.display = 'block';
+})
+BB.addEventListener('click', () => {
+    SongListDiv.style.display = 'none';
 })
 
 
@@ -150,6 +234,7 @@ function MUSICALL(index) {
     ArtistName.textContent = MusicInfo[index].ARTIST;
     Picture.src = MusicInfo[index].IMG;
     Music.src = MusicInfo[index].LINK;
+
 }
 MUSICALL(SongNumberCount);
 let IsPlaying = true;

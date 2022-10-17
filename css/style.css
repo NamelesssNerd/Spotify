@@ -61,17 +61,16 @@ html {
   height: auto;
 }
 #Main #SongListDiv {
+  display: none;
   top: 6rem;
   position: absolute;
-  background-color: blue;
-  height: 140vh;
+  height: 150vh;
   left: 24rem;
   width: 130rem;
   z-index: 1;
 }
 #Main #SongListDiv #SongListDivUpper {
   height: 38rem;
-  background-color: red;
 }
 #Main #SongListDiv #SongListDivUpper .MainUpper {
   display: flex;
@@ -148,17 +147,17 @@ html {
   transform: scale(1.1);
 }
 #Main #SongListDiv #SongListDivDown {
-  height: 73rem;
-  background-color: red;
+  height: 80rem;
+  background-color: var(--Middle--Background);
 }
 #Main #SongListDiv #SongListDivDown .SongListDivDown {
   width: 130rem;
   display: flex;
   align-items: center;
-  background-color: rgb(0, 255, 34);
   height: 5rem;
   color: var(--Color--Smoky);
   font-size: 1.1rem;
+  border-bottom: 0.1rem solid var(--Color--Smoky);
 }
 #Main #SongListDiv #SongListDivDown .SongListDivDown .hh {
   display: flex;
@@ -172,6 +171,73 @@ html {
 }
 #Main #SongListDiv #SongListDivDown .SongListDivDown .daa {
   margin-left: 35rem;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs {
+  height: 68rem;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList {
+  width: 120rem;
+  margin-left: 3rem;
+  display: flex;
+  height: 7rem;
+  color: var(--Color--Smoky);
+  background-color: rgb(38, 36, 35);
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList:hover {
+  border-radius: var(--Border--Radius);
+  background-color: #544b4b;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList .hh {
+  display: flex;
+  height: 7rem;
+  width: 30rem;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList .hh #id {
+  padding-left: 2rem;
+  padding-top: 2rem;
+  width: 5rem;
+  cursor: pointer;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList .hh .songgi {
+  display: flex;
+  width: 21rem;
+  align-items: center;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList .hh .songgi img {
+  margin-left: 1rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList .hh .songgi .dddddaaatttaaa {
+  width: 21rem;
+  margin-left: 1rem;
+  padding-top: 1rem;
+  height: 7rem;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList .hh .songgi .dddddaaatttaaa #ssoonngg {
+  font-size: var(--Small--Font);
+  color: var(--Color--White);
+  cursor: pointer;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList .hh .songgi .dddddaaatttaaa #aarrttiisst {
+  cursor: pointer;
+  margin-top: 0.2rem;
+  font-size: var(--TooSmall--font);
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList #alb {
+  margin-left: 31rem;
+  padding-top: 2rem;
+  font-size: var(--Small--Font);
+  width: 20rem;
+  cursor: pointer;
+}
+#Main #SongListDiv #SongListDivDown #NameListSongs #NameList #daa {
+  margin-left: 27rem;
+  padding-top: 2rem;
+  font-size: var(--Small--Font);
+  width: 30rem;
+  cursor: pointer;
 }
 
 .Container {
@@ -256,6 +322,8 @@ html {
   height: 150vh;
 }
 .Container #Right nav {
+  width: 130rem;
+  position: fixed;
   background-color: rgba(48, 40, 40, 0.9568627451);
   height: 6.5rem;
   display: flex;
@@ -335,6 +403,7 @@ html {
   margin-left: 0.6rem;
 }
 .Container #Right #Recen {
+  margin-top: 6.5rem;
   width: 130rem;
   height: 45rem;
   overflow: hidden;

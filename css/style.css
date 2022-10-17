@@ -118,17 +118,60 @@ html {
   background: linear-gradient(161deg, rgb(30, 29, 29) 0%, rgb(31, 30, 30) 0%, rgb(139, 130, 130) 0%, rgb(38, 36, 36) 100%);
 }
 #Main #SongListDiv #SongListDivUpper .IconUpper .icc {
-  margin-left: 1.5rem;
+  margin-left: 1.8rem;
   font-size: 4.5rem;
   cursor: pointer;
 }
 #Main #SongListDiv #SongListDivUpper .IconUpper .icc:nth-child(1) {
-  padding: 1.4rem;
+  padding: 1.7rem;
   font-size: 2rem;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 5rem;
+  height: 5rem;
   background-color: rgb(33, 230, 33);
   border-radius: 50%;
+}
+#Main #SongListDiv #SongListDivUpper .IconUpper .icc:nth-child(1):hover {
+  transition: 0.2s;
+  background-color: rgb(0, 255, 0);
+  transform: scale(1.1);
+}
+#Main #SongListDiv #SongListDivUpper .IconUpper .icc:nth-child(2) {
+  color: var(--Color--Smoky);
+}
+#Main #SongListDiv #SongListDivUpper .IconUpper .icc:nth-child(2):hover {
+  color: var(--Color--White);
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+#Main #SongListDiv #SongListDivUpper .IconUpper .icc:nth-child(3):hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+#Main #SongListDiv #SongListDivDown {
+  height: 73rem;
+  background-color: red;
+}
+#Main #SongListDiv #SongListDivDown .SongListDivDown {
+  width: 130rem;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 255, 34);
+  height: 5rem;
+  color: var(--Color--Smoky);
+  font-size: 1.1rem;
+}
+#Main #SongListDiv #SongListDivDown .SongListDivDown .hh {
+  display: flex;
+  padding-left: 2rem;
+}
+#Main #SongListDiv #SongListDivDown .SongListDivDown .hh h3 {
+  margin-left: 3rem;
+}
+#Main #SongListDiv #SongListDivDown .SongListDivDown .alb {
+  margin-left: 50rem;
+}
+#Main #SongListDiv #SongListDivDown .SongListDivDown .daa {
+  margin-left: 35rem;
 }
 
 .Container {

@@ -2,7 +2,7 @@ const MusicInfo = [
     {
         NAME: 'Badhaiyaan',
         ARTIST: 'Dhvani Bhanushali',
-        IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113604/150539-badhaiyaan-dhvani-bhanushali-mp3-song-300.jpg',
+        IMG: 'https://c.saavncdn.com/894/Badhaiyaan-Hindi-2022-20221010163131-500x500.jpg',
         LINK: '../Audio/Badhaiyaan.mp3',
         ALBUm: 'Middle Part',
         DATE: '2 days ago'
@@ -10,7 +10,7 @@ const MusicInfo = [
     {
         NAME: 'Sajna Hai Mujhe',
         ARTIST: 'Shruti Raneora',
-        IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113604/150524-sajna-hai-mujhe-shruti-rane-mp3-song-300.jpg',
+        IMG: 'https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/64/f4/4f/64f44fa6-e47c-b505-0ffb-be8979a44527/197187084302.jpg/1200x1200bf-60.jpg',
         LINK: '../Audio/Sajna Hai Mujhe - Shruti Rane.mp3',
         ALBUm: 'Crestline',
         DATE: '6 days ago'
@@ -26,7 +26,7 @@ const MusicInfo = [
     {
         NAME: 'Jhaanjar',
         ARTIST: 'B Praak',
-        IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113692/150463-jhaanjar-b-praak-mp3-song-300.jpg',
+        IMG: 'https://pagalsong.in/uploads//thumbnails/300x300/jhaanjar_b_praak.jpg',
         LINK: '../Audio/Jhaanjar - B Praak.mp3',
         ALBUm: 'Oh! the View',
         DATE: '3 days ago'
@@ -34,7 +34,7 @@ const MusicInfo = [
     {
         NAME: 'Pehli Baarish Mein',
         ARTIST: 'Sumit Bhalla',
-        IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113604/150336-pehli-baarish-mein-sumit-bhalla-mp3-song-300.jpg',
+        IMG: 'https://pagalsong.in/uploads//thumbnails/300x300/id3Picture_527747265.jpg',
         LINK: '../Audio/Pehli Baarish Mein - Sumit Bhalla.mp3',
         ALBUm: 'High Up',
         DATE: '5 days ago'
@@ -42,7 +42,7 @@ const MusicInfo = [
     {
         NAME: 'Manchali',
         ARTIST: 'Zahrah S Khan',
-        IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113643/150273-manchali-liger-mp3-song-300.jpg',
+        IMG: 'https://djmaza.live/siteuploads/thumb/sft15/7424_resize2x_200x200.jpg',
         LINK: '../Audio/Manchali - Liger.mp3',
         ALBUm: 'Winter Sun',
         DATE: '6 days ago'
@@ -58,7 +58,7 @@ const MusicInfo = [
     {
         NAME: 'Suna Raja Pike Ganja ',
         ARTIST: 'Khesari Lal Yadav',
-        IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113490/149984-suna-raja-pike-ganja-khesari-lal-yadav-mp3-song-300.jpg',
+        IMG: 'https://i.ytimg.com/vi/FM0b3fMskx8/maxresdefault.jpg',
         LINK: '../Audio/Suna Raja Pike Ganja - Khesari Lal Yadav.mp3',
         ALBUm: 'Zero Gravity',
         DATE: '4 days ago'
@@ -66,7 +66,7 @@ const MusicInfo = [
     {
         NAME: 'Aail Sawan',
         ARTIST: 'Pawan Singh',
-        IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113490/149958-aail-sawan-pawan-singh-mp3-song-300.jpg',
+        IMG: 'https://i.ytimg.com/vi/hobSR-lwhg8/maxresdefault.jpg',
         LINK: '../Audio/Aail Sawan.mp3',
         ALBUm: 'Slip Away',
         DATE: '21 days ago'
@@ -74,7 +74,7 @@ const MusicInfo = [
     {
         NAME: 'Barf',
         ARTIST: 'Khesari Lal Yadav',
-        IMG: 'https://www.pagalworld.pw/GpE34Kg9Gq/113490/149888-barf-khesari-lal-yadav-mp3-song-300.jpg',
+        IMG: 'https://pagalsong.in/uploads//thumbnails/300x300/id3Picture_909694659.jpg',
         LINK: '../Audio/Barf - Khesari Lal Yadav.mp3',
         ALBUm: 'Nuraghe',
         DATE: '11 days ago'

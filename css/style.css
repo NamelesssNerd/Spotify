@@ -57,7 +57,7 @@ html {
 #Main {
   position: relative;
   font-family: var(--Font--Family);
-  background-color: red;
+  background-color: var(--Middle--Background);
   height: auto;
 }
 #Main a {
@@ -72,7 +72,7 @@ html {
   position: absolute;
   height: 150vh;
   left: 24rem;
-  width: 130rem;
+  width: 100%;
   z-index: 1;
 }
 #Main #SongListDiv #SongListDivUpper {
@@ -179,10 +179,11 @@ html {
   margin-left: 35rem;
 }
 #Main #SongListDiv #SongListDivDown #NameListSongs {
+  width: 100%;
   height: 68rem;
 }
 #Main #SongListDiv #SongListDivDown #NameListSongs #NameList {
-  width: 120rem;
+  width: 85%;
   margin-left: 3rem;
   display: flex;
   height: 7rem;
@@ -328,7 +329,7 @@ html {
   height: 150vh;
 }
 .Container #Right nav {
-  width: 130rem;
+  width: 86%;
   position: fixed;
   background-color: rgba(48, 40, 40, 0.9568627451);
   height: 6.5rem;

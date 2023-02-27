@@ -215,8 +215,6 @@ BB.addEventListener('click', () => {
     SongListDiv.style.display = 'none';
 })
 
-
-
 Fresh.map((currenELem) => {
     const InnerData = `<div class="box">
     <div class="Image">

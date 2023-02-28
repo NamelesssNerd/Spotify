@@ -1,4 +1,4 @@
-# If-I-Create-Spotify
+# Spotify clone
 This is the simple Spotify Web app only for Beginner Developer Using simple HTML , CSS and  Javascript.
 
 DEMO LOOKS LIKE:
